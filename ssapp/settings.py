@@ -1,6 +1,6 @@
 # Django settings for ssapp project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -102,6 +102,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'ssapp.urls'
 
 TEMPLATE_DIRS = (
+    '/Users/JME/Documents/Research/smartstep/ssapp/static/templates'
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -114,8 +115,9 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'minigame',
     # Uncomment the next line to enable the admin:
-    # 'django.contrib.admin',
+     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
