@@ -25,11 +25,13 @@
         </style>
         <script>
         $(window).ready(function(){
-            var score = 0;
+            var score = 0,
+                updateScore = true;
             $(window).on('click', '.dance-button', function(e){
                 e.preventDefault();
             })
             .on('keydown', function(e){
+                e.stopPropagation();
                 e.preventDefault();
                 var code = e.which;
                 console.log(code);
@@ -41,12 +43,16 @@
                     $('.right').css('background-color', 'red').addClass('pressed');
                 if(code == 40)
                     $('.down').css('background-color', 'red').addClass('pressed');
-                score = score + 1;
-                $('.score').text(score);
+                if(updateScore === true){
+                    updateScore = false;
+                    score = score + 1;
+                    $('.score').text(score);
+                }
             })
             .on('keyup', function(e){
                  e.preventDefault();
                 $('.dance-button').css('background-color', '#20a7d8').removeClass('pressed');
+                updateScore = true;
             });
         });
         </script>
