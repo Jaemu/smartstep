@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <script>
+        $(window).ready(function(){
+            $(window).on('click', '.dance-button', function(e){
+                e.preventDefault();
+            })
+            .on('keydown', function(e){
+                e.preventDefault();
+                $('.dance-button').css('background-color', '#20a7d8');
+                var code = e.which;
+                console.log(code);
+                if(code == 38)
+                    $('.up').css('background-color', 'red');
+                if(code == 37)
+                    $('.left').css('background-color', 'red');
+                if(code == 39)
+                    $('.right').css('background-color', 'red');
+                if(code == 40)
+                    $('.down').css('background-color', 'red');
+            })
+            .on('keyup', function(e){
+                 e.preventDefault();
+                $('.dance-button').css('background-color', '#20a7d8');
+            });
+        });
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="container" style="background-color: #F0F0F0; margin-top: 60px;">
+            <div class="row">
+                <p style="color: #20a7d8; text-align: center; text-shadow: -1px -1px 1px #707070; font-size: 64px; margin-top: 24px;">Dance Pad Simulator</p>
+            </div>
+        </div>
+        <div class="container" style="text-align: center;margin-top: 24px; position: relative;">
+            <div class="dance-pad" style="max-width: 8400px;background-color: #F0F0F0; height: 500px;padding-top:60px; position: relative;">
+                <div class="dance-button" style="background-color: #20a7d8; width:200px;  height:100px; top: 40px; left: 100px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>\</h3>
+                </div>
+               <div class="dance-button up" style="background-color: #20a7d8; width:200px;  height:100px; top: 40px; left: 460px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>^</h3>
+                </div>
+                <div class="dance-button" style="background-color: #20a7d8; width:200px;  height:100px; top: 40px; left: 800px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>/</h3>
+                </div>
+                  <div class="dance-button left" style="background-color: #20a7d8; width:200px;  height:100px; top: 200px; left: 100px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3><-</h3>
+                </div>
+               <div class="dance-button" style="background-color: #20a7d8; width:200px;  height:100px; top: 200px; left: 460px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>Start</h3>
+                </div>
+                <div class="dance-button right" style="background-color: #20a7d8; width:200px;  height:100px; top: 200px; left: 800px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>-></h3>
+                </div>
+                  <div class="dance-button" style="background-color: #20a7d8; width:200px;  height:100px; top: 360px; left: 100px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>/</h3>
+                </div>
+               <div class="dance-button down" style="background-color: #20a7d8; width:200px;  height:100px; top: 360px; left: 460px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>|</h3>
+                </div>
+                <div class="dance-button" style="background-color: #20a7d8; width:200px;  height:100px; top: 360px; left: 800px; text-align:center; display: inline-block;position: absolute;float: left;">
+                    <h3>\</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+        <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    </body>
+</html>
